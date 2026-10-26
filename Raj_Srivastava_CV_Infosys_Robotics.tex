@@ -1,0 +1,175 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.75in}
+\addtolength{\textheight}{1.55in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+\begin{document}
+
+\begin{center}
+      {\Huge \scshape Raj Srivastava} \\ \vspace{4pt}
+    \small \raisebox{-0.1\height}\faPhone\ (+91) 7739305357 ~ \href{mailto:srivastavraj37@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{srivastavraj37@gmail.com}} ~
+    \href{https://www.linkedin.com/in/raj-srivastava-b11790288/}{\raisebox{-0.2\height}\faLinkedin\ \underline{LinkedIn}}  ~
+    \href{https://github.com/srivastavaraj37}{\raisebox{-0.2\height}\faGithub\ \underline{GitHub}} ~
+    \href{https://leetcode.com/u/rajsrivastava3_0/}{\raisebox{-0.2\height}\faCode\ \underline{LeetCode}}
+    \vspace{-8pt}
+\end{center}
+
+\section{Summary}
+\small Robotics student at NIT Rourkela (Integrated M.Sc., batch 2028). I build robots end to end, from PID balance control and sensor fusion to path planning and ROS2 arm control, and have won or placed at national competitions including IIT Bombay's e-Yantra and Gujarat Robofest.
+\vspace{-6pt}
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {National Institute of Technology, Rourkela}{Sep 2023 - Present}
+      {Integrated M.Sc., Chemistry}{Rourkela, Odisha}
+  \resumeSubHeadingListEnd
+
+\section{Relevant Coursework}
+\begin{multicols}{3}
+\begin{itemize}[itemsep=-5pt, parsep=3pt]
+    \item\small Control Systems (PID, Feedback)
+    \item ROS2 \& Autonomous Navigation
+    \item Embedded Systems, Embedded C
+    \item Computer Vision
+    \item Data Structures \& Algorithms
+    \item Operating Systems (Ubuntu)
+\end{itemize}
+\end{multicols}
+\vspace*{2.0\multicolsep}
+
+\vspace{3pt}
+\section{Projects}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Self-Balancing Builder Bot (e-Yantra, IIT Bombay, Runner-up)}{Oct 2024 - Mar 2025}
+      {C++, Arduino, PID Control, MPU6050 IMU, CoppeliaSim}{\href{https://github.com/srivastavaraj37/balancing-builder-bot}{\textcolor{blue}{GitHub}} $\vert$ \href{https://www.youtube.com/watch?v=4wdXCuPUqr4}{\textcolor{blue}{Video}}}
+      \resumeItemListStart
+        \resumeItem{Built a two-wheel self-balancing robot that works like an inverted pendulum, the same balance problem a humanoid solves on two legs. A real-time PID loop corrects tilt using live IMU readings.}
+        \resumeItem{Added stable multi-directional motion, payload handling and servo-based pick and drop on the same chassis.}
+        \resumeItem{Tested the control logic in CoppeliaSim before hardware and designed parts in Fusion 360. Placed Runner-up among 1200+ teams.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {4-DOF Robotic Arm}{Dec 2024 - Feb 2025}
+      {C++, ROS2, MoveIt, Gazebo, Forward Kinematics}{\href{https://github.com/srivastavaraj37/4-DOF-Robotic-Arm/tree/main}{\textcolor{blue}{GitHub}}}
+      \resumeItemListStart
+        \resumeItem{Developed a 4-DOF arm with ROS2 joint-space control and forward kinematics, the same groundwork used for humanoid arm motion.}
+        \resumeItem{Tuned PID gains for accurate pick and place and verified the full pipeline in Gazebo simulation.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Maze Solver Bot (Gujarat Robofest 5.0, 1st Place)}{Oct 2025 - Mar 2026}
+      {C++, ESP32, ToF Sensors, Computer Vision, Path Planning}{\href{https://github.com/srivastavaraj37/Robofest-winner-Bot---Maze-solver}{\textcolor{blue}{GitHub}} $\vert$ \href{https://drive.google.com/file/d/1Y3SoVk7yhP7JwMxXjzXYTzWj-ubeMt1x/view?usp=sharing}{\textcolor{blue}{Video}}}
+      \resumeItemListStart
+        \resumeItem{Built a fully autonomous maze-solving robot on ESP32 that finished first at Gujarat Robofest 5.0.}
+        \resumeItem{Fused a 4$\times$4 multi-zone ToF array with side ToF sensors for live wall mapping, obstacle detection and node identification.}
+        \resumeItem{Explored a 16$\times$16 maze in about 50 seconds with Tr\'emaux (DFS) exploration, then used Flood Fill (BFS) to cut a 34-cell route down to 7 cells.}
+        \resumeItem{Replans the shortest path from the current node when a route is blocked, so the bot never has to restart.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+\vspace{-8pt}
+
+\section{Achievements}
+\begin{itemize}[leftmargin=0.35in, itemsep=1pt, label={\tiny$\bullet$}]
+    \item \small\textbf{1st Place, Gujarat Robofest 5.0} \hfill \small\textbf{Mar 2026} \\
+    \small Autonomous maze-solving robot with exploration, path memory and optimized navigation. \hfill
+    \href{https://drive.google.com/file/d/1qMBY7NpupAS-StSLRKl7HkcCGk9RHLLh/view?usp=sharing}{\textcolor{blue}{Certificate}}
+    \item \small\textbf{Runner-up, e-Yantra Robotics Competition (IIT Bombay)} \hfill \small\textbf{Mar 2025} \\
+    \small Secured 2nd position among 1200+ teams. \hfill
+    \href{https://drive.google.com/file/d/1Spg4E0pJioTLlNKW_KL8ts4B7_th_Z37/view?usp=sharing}{\textcolor{blue}{Certificate}}
+    \item \small\textbf{Winner, e-Yantra Bot Race} \hfill \small\textbf{Mar 2025} \\
+    \small First place in a timed, high-speed navigation challenge.
+    \item \small\textbf{Top 2\% Globally, LeetCode Biweekly Contest 186 (Rank 469 / 40,113)} \hfill \small\textbf{2026} \\
+    \small 200+ problems solved overall. \hfill
+    \href{https://leetcode.com/u/rajsrivastava3_0/}{\textcolor{blue}{Profile}}
+\end{itemize}
+\vspace{-5pt}
+
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.32in, label={\tiny$\bullet$}, itemsep=1pt, parsep=0pt, topsep=3pt, partopsep=0pt]
+    \item \textbf{Languages}: C, C++, Python, Embedded C
+    \item \textbf{Robotics \& Frameworks}: ROS2, MoveIt, Gazebo, OpenCV, Sensor Fusion, Autonomous Navigation
+    \item \textbf{Hardware \& Embedded}: ESP32, Arduino, Raspberry Pi, NVIDIA Jetson Nano, PID Control, IMU and ToF Sensors
+    \item \textbf{Tools \& OS}: Linux (Ubuntu), Git, GitHub, VS Code, Fusion 360, CoppeliaSim
+\end{itemize}
+\vspace{-5pt}
+
+\section{Extracurricular Activities}
+    \resumeSubHeadingListStart
+        \resumeSubheading{E-Cell, NIT Rourkela}{Oct 2023 - Present}{Core Team Member}{Rourkela, Odisha}
+            \resumeItemListStart
+               \resumeItem{Reached out to 50+ companies and secured sponsorships for the National Entrepreneurship Summit (NES), handling negotiations and formal communication.}
+               \resumeItem{Led a team of 30+ members running startup and entrepreneurship events on campus.}
+            \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+\end{document}
